@@ -9,17 +9,39 @@
   </head>
   <body>
     <div class="container">
-      <form class="flash-cards">
-        <div class="form-group">
-          <label for="question" id="question1"></label>
-          <div class="radio">
-            <label>
-              <input type="radio" name="answer" value="">
-              <span class="answer"></span>
-            </label>
+      <div class="well">
+        <form class="flash-cards">
+          <div class="panel panel-default">
+            <div class="panel-heading">
+              <label for="question" id="question1"></label>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <button type="button" name="answer" value="" class="btn">
+                  <span class="answer"></span>
+                </button>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" name="wrong1" value="" class="btn">
+                  <span class="wrong1"></span>
+                </button>
+                </div>
+                <div class="col-md-4">
+                  <button type="button" name="wrong2" value="" class="btn">
+                  <span class="wrong2"></span>
+                </button>
+                </div>
+              </div>
+            </div>
+            <div class="panel-footer">
+              <button type="submit" name="button" class= "btn">Submit</button>
+            </div>
           </div>
-        </div>
-      </form>
+            <div class="form-group">
+            </div>
+        </form>
+      </div>
     </div>
   </body>
 </html>
