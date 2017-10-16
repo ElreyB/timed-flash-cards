@@ -29,7 +29,11 @@ describe('FlashCard', function(){
   });
 
   it("should return question", function(){
-
     expect(FlashCard.cards()[FlashCard.questionKeys()[0]]).toEqual("to compare if values are equal")
+  });
+
+  it("should increase points by one", function(){
+    flash.addPoint()
+    expect(flash.points).toEqual(1)
   });
 });

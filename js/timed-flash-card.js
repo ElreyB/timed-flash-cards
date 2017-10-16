@@ -19,4 +19,8 @@ export class FlashCard {
     return questions;
   }
 
+  addPoint(){
+    this.points += 1;
+  }
+
 }
