@@ -10,39 +10,18 @@
   <body>
     <div class="container">
       <div class="well">
-        <form class="flash-cards">
-          <div class="panel panel-default">
-            <div class="panel-heading">
-              <label for="question" id="question1"></label>
-            </div>
-            <div class="panel-body">
-              <div class="row">
-                <div class="col-md-4">
-                  <button type="button" name="answer" value="" class="btn">
-                  <span class="answer"></span>
-                </button>
-                </div>
-                <div class="col-md-4">
-                  <button type="button" name="wrong1" value="" class="btn">
-                  <span class="wrong1"></span>
-                </button>
-                </div>
-                <div class="col-md-4">
-                  <button type="button" name="wrong2" value="" class="btn">
-                  <span class="wrong2"></span>
-                </button>
-                </div>
-              </div>
-            </div>
-            <div class="panel-footer">
-              <button type="submit" name="button" class= "btn">Submit</button>
-            </div>
-          </div>
+        <div class="name-container">
+          <form class="name-form">
             <div class="form-group">
+              <label for="name">Please enter your name:</label>
+              <input type="text" class="form-control name" required>
             </div>
-        </form>
+            <button type="submit" class="btn">Submit Name</button>
+          </form>
+        </div>
+        <br>
         <div class="result">
-          
+
         </div>
       </div>
     </div>

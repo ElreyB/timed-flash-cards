@@ -2,7 +2,7 @@ export class FlashCard {
   constructor(options){
     this.name = options.name;
     this.points = 0;
-    this.timer = 10
+    this.timer = 10;
   }
 
   static cards(){
@@ -41,6 +41,45 @@ export class FlashCard {
     }, 1000);
   }
 
+  static createForm(){
+    let forms;
+    forms = `<form class="flash-cards">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <label for="question" id="question1"></label>
+          </div>
+          <div class="panel-body">
+            <div class="row">
+              <div class="col-md-4">
+                <button type="button" name="answer" value="" class="btn">
+                <span class="answer"></span>
+              </button>
+              </div>
+              <div class="col-md-4">
+                <button type="button" name="wrong1" value="" class="btn">
+                <span class="wrong1"></span>
+              </button>
+              </div>
+              <div class="col-md-4">
+                <button type="button" name="wrong2" value="" class="btn">
+                <span class="wrong2"></span>
+              </button>
+              </div>
+            </div>
+          </div>
+          <div class="panel-footer">
+            <button type="submit" name="button" class= "btn">Submit</button>
+            <div class="points"></div>
+          </div>
+        </div>
+          <div class="form-group">
+          </div>
+      </form><br>`;
+
+    return forms;
+  }
+
+//ending
 }
 
 
