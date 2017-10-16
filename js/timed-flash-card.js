@@ -1,7 +1,8 @@
 export class FlashCard {
   constructor(options){
     this.name = options.name;
-    this.points = 0
+    this.points = 0;
+    this.timer = 10
   }
 
   static cards(){
@@ -21,6 +22,12 @@ export class FlashCard {
 
   addPoint(){
     this.points += 1;
+  }
+
+  setTimer(){
+    setInterval(() => {
+      this.timer--;
+    }, 1000);
   }
 
 }

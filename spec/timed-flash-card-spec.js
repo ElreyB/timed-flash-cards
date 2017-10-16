@@ -5,6 +5,11 @@ describe('FlashCard', function(){
 
   beforeEach(function(){
     flash = new FlashCard({name: "Bob"})
+    jasmine.clock().install();
+  });
+
+  afterEach(function(){
+    jasmine.clock().uninstall();
   });
 
   it("should have a name", function(){
@@ -24,7 +29,6 @@ describe('FlashCard', function(){
   });
 
   it("should return the length of Object", function(){
-    console.log(Object.keys(FlashCard.cards()))
     expect(FlashCard.questionKeys().length).toEqual(3)
   });
 
@@ -35,5 +39,11 @@ describe('FlashCard', function(){
   it("should increase points by one", function(){
     flash.addPoint()
     expect(flash.points).toEqual(1)
+  });
+
+  it("should have timer of 7 after 3000 mileseconds", function(){
+    flash.setTimer();
+    jasmine.clock().tick(3000);
+    expect(flash.timer).toEqual(7);
   });
 });
