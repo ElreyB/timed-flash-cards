@@ -31,3 +31,8 @@ export class FlashCard {
   }
 
 }
+
+
+// function RadionButtonSelectedValueSet() {
+//   $("input[name='answer']").prop('value', "hello");
+// }
