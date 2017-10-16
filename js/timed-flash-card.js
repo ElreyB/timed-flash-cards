@@ -4,11 +4,19 @@ export class FlashCard {
     this.points = 0
   }
 
-  cards(){
+  static cards(){
     let flashCards = new Object({
       "When do you use === ?": "to compare if values are equal",
       "When do you use = ?": "to define a variable",
       "When do you use an ID in a HTML file?": "when you want to assign an unique selector to element"
-    })
+    });
+
+    return flashCards;
   }
+
+  static questionKeys(){
+    let questions = Object.keys(FlashCard.cards());
+    return questions;
+  }
+
 }
