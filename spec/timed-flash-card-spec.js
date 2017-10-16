@@ -46,4 +46,9 @@ describe('FlashCard', function(){
     jasmine.clock().tick(3000);
     expect(flash.timer).toEqual(7);
   });
+
+  it("should return wrong answer of first index", function(){
+    expect(FlashCard.wrongAnswers()[FlashCard.questionKeys()[0]][0]).toEqual("wrong1")
+  });
+
 });

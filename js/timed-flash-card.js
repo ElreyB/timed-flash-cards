@@ -20,6 +20,17 @@ export class FlashCard {
     return questions;
   }
 
+  static wrongAnswers(){
+    let wrongCards = new Object({
+      "When do you use === ?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"],
+      "When do you use = ?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"],
+      "When do you use an ID in a HTML file?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
+    });
+
+    return wrongCards;
+  }
+
+
   addPoint(){
     this.points += 1;
   }
