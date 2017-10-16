@@ -28,8 +28,8 @@ describe('FlashCard', function(){
     expect(FlashCard.questionKeys().length).toEqual(3)
   });
 
-  // it("should return question", function(){
-  //   console.log(Object.keys(flash.cards))
-  //   expect(FlashCard.cards[FlashCard.questionKeys[0]]).toEqual("to compare if values are equal")
-  // });
+  it("should return question", function(){
+
+    expect(FlashCard.cards()[FlashCard.questionKeys()[0]]).toEqual("to compare if values are equal")
+  });
 });
