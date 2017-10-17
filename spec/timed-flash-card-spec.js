@@ -4,7 +4,7 @@ describe('FlashCard', function(){
   let flash;
 
   beforeEach(function(){
-    flash = new FlashCard({name: "Bob"})
+    flash = new FlashCard()
     jasmine.clock().install();
   });
 
@@ -13,6 +13,7 @@ describe('FlashCard', function(){
   });
 
   it("should have a name", function(){
+    flash.setName("Bob")
     expect(flash.name).toEqual("Bob")
   });
 
