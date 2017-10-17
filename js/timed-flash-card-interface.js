@@ -1,6 +1,7 @@
 import { FlashCard } from "./../js/timed-flash-card.js";
 
 $(document).ready(function() {
+  let player = new FlashCard();
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
     let cardForm = FlashCard.createForm(card, index);
@@ -10,20 +11,21 @@ $(document).ready(function() {
   $(".name-form").submit(function(e) {
     e.preventDefault();
     const userName = $("input.name").val();
-    player = new FlashCard({ name: userName });
-    player.addPoint();
-    if (player.points > 0) {
-      $(".result").text(player.points);
-    }
+    player.setName(userName);
   });
 
-  $(".btn").click(function() {
+  $(".button").click(function() {
     let answer = $(this).attr("value");
     let index = $(this).attr("index");
     if (answer === FlashCard.cards()[index].answer) {
+      player.addPoint();
       $(".result").text("Your answer is correct");
     } else {
       $(".result").text("Your answer is incorrect");
+    }
+    
+    if (player.points > 0) {
+      $(".points").text(player.points);
     }
   });
 });
