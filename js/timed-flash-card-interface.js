@@ -2,6 +2,7 @@ import { FlashCard } from "./../js/timed-flash-card.js";
 
 $(document).ready(function() {
   let player = new FlashCard();
+  let status = true;
 
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
@@ -18,14 +19,16 @@ $(document).ready(function() {
     $("div.start").removeClass("hide");
   });
 
+
   $("button.start").click(function(){
-    setInterval(function() {
-      if (player.timer < 0){
-        clearInterval();
-      }else{
+   let counter = setInterval(function() {
         $("div.timer").text(player.timer);
+        console.log(player.timer)
+        if (player.timer === 0){
+          clearInterval(counter);
+          $("span.times-up").removeClass("hide");
+        }
         player.timer--;
-      }
     }, 1000);
   });
 
