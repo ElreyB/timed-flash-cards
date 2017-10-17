@@ -2,7 +2,6 @@ import { FlashCard } from "./../js/timed-flash-card.js";
 
 $(document).ready(function() {
   let player = new FlashCard();
-  let status = true;
 
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
@@ -23,27 +22,30 @@ $(document).ready(function() {
   $("button.start").click(function(){
    let counter = setInterval(function() {
         $("div.timer").text(player.timer);
-        console.log(player.timer)
         if (player.timer === 0){
           clearInterval(counter);
           $("span.times-up").removeClass("hide");
+        }else{
+          $(".button").click(function() {
+            let answer = $(this).attr("value");
+            let index = $(this).attr("index");
+            if (answer === FlashCard.cards()[index].answer) {
+              player.addPoint();
+              $(this).addClass("btn-success");
+              clearInterval(counter);
+            } else {
+              $(this).addClass("btn-danger");
+              clearInterval(counter);
+            }
+
+            if (player.points > 0) {
+              $(".points").text(player.points);
+            }
+          });
         }
         player.timer--;
     }, 1000);
   });
 
-  $(".button").click(function() {
-    let answer = $(this).attr("value");
-    let index = $(this).attr("index");
-    if (answer === FlashCard.cards()[index].answer) {
-      player.addPoint();
-      $(".result").text("Your answer is correct");
-    } else {
-      $(".result").text("Your answer is incorrect");
-    }
 
-    if (player.points > 0) {
-      $(".points").text(player.points);
-    }
-  });
 });
