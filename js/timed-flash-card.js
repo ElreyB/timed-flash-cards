@@ -81,6 +81,7 @@ export class FlashCard {
         <div class="panel panel-default">
           <div class="panel-heading">
             <label for="question" id="question1">${card.question}</label>
+            <div class="timer"></div>
           </div>
           <div class="panel-body">
             <div class="row">

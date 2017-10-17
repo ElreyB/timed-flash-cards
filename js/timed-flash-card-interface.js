@@ -2,16 +2,20 @@ import { FlashCard } from "./../js/timed-flash-card.js";
 
 $(document).ready(function() {
   let player = new FlashCard();
+
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
     let cardForm = FlashCard.createForm(card, index);
-    $(".well").append(cardForm);
+    $(".display-cards").append(cardForm);
   });
 
   $(".name-form").submit(function(e) {
     e.preventDefault();
     const userName = $("input.name").val();
     player.setName(userName);
+    $("span.player").text(player.name);
+    $("div.name-container").addClass("hide");
+    $("div.start").removeClass("hide");
   });
 
   $(".button").click(function() {
@@ -23,7 +27,7 @@ $(document).ready(function() {
     } else {
       $(".result").text("Your answer is incorrect");
     }
-    
+
     if (player.points > 0) {
       $(".points").text(player.points);
     }
