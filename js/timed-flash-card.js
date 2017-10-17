@@ -40,14 +40,20 @@ export class FlashCard {
   }
 
   addPoint() {
-    this.points += 1;
+    this.points++;
+  }
+
+  startTimer(num){
+    setInterval(() => {
+      this.timer--;
+    }, num * 1000);
   }
 
   static createForm(card, index) {
     let forms;
     const answers = [
       `<div class="col-md-6">
-        <button type="button" name="answer" index="${index}" value="${card.answer}" class="btn button">
+        <button type="button" name="answer" index="${index}" value="${card.answer}" class="btn button btn-answer">
           <span class="answer">${card.answer}</span>
         </button>
         </div>`,
@@ -87,8 +93,6 @@ export class FlashCard {
             <div class="points"></div>
           </div>
         </div>
-          <div class="form-group">
-          </div>
       </form><br>`;
 
     return forms;
