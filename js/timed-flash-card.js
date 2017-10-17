@@ -83,7 +83,7 @@ export class FlashCard {
             </div>
           </div>
           <div class="panel-footer">
-            <button type="submit" name="button" class= "btn">Submit</button>
+            <button type="button" name="button" class= "btn next">Next</button>
             <div class="points"></div>
           </div>
         </div>
