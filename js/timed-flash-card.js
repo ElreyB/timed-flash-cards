@@ -43,12 +43,6 @@ export class FlashCard {
     this.points += 1;
   }
 
-  setTimer() {
-    setInterval(() => {
-      this.timer--;
-    }, 1000);
-  }
-
   static createForm(card, index) {
     let forms;
     const answers = [

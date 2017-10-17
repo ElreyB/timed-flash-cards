@@ -18,6 +18,17 @@ $(document).ready(function() {
     $("div.start").removeClass("hide");
   });
 
+  $("button.start").click(function(){
+    setInterval(function() {
+      if (player.timer < 0){
+        clearInterval();
+      }else{
+        $("div.timer").text(player.timer);
+        player.timer--;
+      }
+    }, 1000);
+  });
+
   $(".button").click(function() {
     let answer = $(this).attr("value");
     let index = $(this).attr("index");
