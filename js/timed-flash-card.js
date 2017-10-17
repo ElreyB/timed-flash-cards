@@ -1,70 +1,86 @@
+function shuffleArray(array) {
+  for (var i = array.length - 1; i > 0; i--) {
+    var j = Math.floor(Math.random() * (i + 1));
+    [array[i], array[j]] = [array[j], array[i]];
+  }
+  return array;
+}
+
 export class FlashCard {
-  constructor(options){
+  constructor(options) {
     this.name = options.name;
     this.points = 0;
     this.timer = 10;
   }
 
-  static cards(){
-    let flashCards = new Object({
-      "When do you use === ?": "to compare if values are equal",
-      "When do you use = ?": "to define a variable",
-      "When do you use an ID in a HTML file?": "when you want to assign an unique selector to element"
-    });
+  static cards() {
+    let flashCards = [
+      {
+        question: "When do you use === ?",
+        answer: "to compare if values are equal",
+        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
+      },
+      {
+        question: "When do you use = ?",
+        answer: "to define a variable",
+        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
+      },
+      {
+        question: "When do you use an ID in a HTML file?",
+        answer: "when you want to assign an unique selector to element",
+        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
+      }
+    ];
 
     return flashCards;
   }
 
-  static questionKeys(){
-    let questions = Object.keys(FlashCard.cards());
-    return questions;
-  }
-
-  static wrongAnswers(){
-    let wrongCards = new Object({
-      "When do you use === ?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"],
-      "When do you use = ?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"],
-      "When do you use an ID in a HTML file?": ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
-    });
-
-    return wrongCards;
-  }
-
-
-  addPoint(){
+  addPoint() {
     this.points += 1;
   }
 
-  setTimer(){
+  setTimer() {
     setInterval(() => {
       this.timer--;
     }, 1000);
   }
 
-  static createForm(){
+  static createForm(card, index) {
     let forms;
+    const answers = [
+      `<div class="col-md-6">
+        <button type="button" name="answer" index="${index}" value="${card.answer}" class="btn">
+          <span class="answer">${card.answer}</span>
+        </button>
+        </div>`,
+      `<div class="col-md-6">
+        <button type="button" name="wrong1" index="${index}" value="${card
+        .wrongAnswers[0]}" class="btn">
+          <span class="wrong1">${card.wrongAnswers[0]}</span>
+        </button>
+      </div>`,
+      `<div class="col-md-6">
+        <button type="button" name="wrong2" index="${index}" value="${card
+        .wrongAnswers[1]}" class="btn">
+          <span class="wrong2">${card.wrongAnswers[1]}</span>
+        </button>
+      </div>`,
+      `<div class="col-md-6">
+        <button type="button" name="wrong2" index="${index}" value="${card
+        .wrongAnswers[2]}" class="btn">
+          <span class="wrong2">${card.wrongAnswers[2]}</span>
+        </button>
+      </div>`
+    ];
+
     forms = `<form class="flash-cards">
         <div class="panel panel-default">
           <div class="panel-heading">
-            <label for="question" id="question1"></label>
+            <label for="question" id="question1">${card.question}</label>
           </div>
           <div class="panel-body">
             <div class="row">
-              <div class="col-md-4">
-                <button type="button" name="answer" value="" class="btn">
-                <span class="answer"></span>
-              </button>
-              </div>
-              <div class="col-md-4">
-                <button type="button" name="wrong1" value="" class="btn">
-                <span class="wrong1"></span>
-              </button>
-              </div>
-              <div class="col-md-4">
-                <button type="button" name="wrong2" value="" class="btn">
-                <span class="wrong2"></span>
-              </button>
-              </div>
+            ${shuffleArray(answers).join("\n")}
             </div>
           </div>
           <div class="panel-footer">
@@ -79,9 +95,8 @@ export class FlashCard {
     return forms;
   }
 
-//ending
+  //ending
 }
-
 
 // function RadionButtonSelectedValueSet() {
 //   $("input[name='answer']").prop('value', "hello");
