@@ -17,12 +17,12 @@ $(document).ready(function() {
     player.setName(userName);
     $("span.player").text(player.name);
     $("div.name-container").addClass("hide");
-    $("div.start").removeClass("hide");
+    $("div.start-container").removeClass("hide");
   });
 
 
   $("button.start").click(() => {
-    $("div.start").addClass("hide");
+    $("div.start-container").addClass("hide");
     $(`.card-${index}`).removeClass("hide");
      counter = setInterval(() => {
          $("div.timer").text(player.timer);

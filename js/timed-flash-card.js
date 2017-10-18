@@ -1,10 +1,12 @@
-function shuffleArray(array) {
-  for (var i = array.length - 1; i > 0; i--) {
-    var j = Math.floor(Math.random() * (i + 1));
-    [array[i], array[j]] = [array[j], array[i]];
-  }
-  return array;
-}
+// function shuffleArray(array) {
+//   for (var i = array.length - 1; i > 0; i--) {
+//     var j = Math.floor(Math.random() * (i + 1));
+//     [array[i], array[j]] = [array[j], array[i]];
+//   }
+//   return array;
+// }
+
+import { shuffleArray, flashCards} from './flash-cards.js';
 
 export class FlashCard {
   constructor(options = {}) {
@@ -14,24 +16,6 @@ export class FlashCard {
   }
 
   static cards() {
-    let flashCards = [
-      {
-        question: "When do you use === ?",
-        answer: "to compare if values are equal",
-        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
-      },
-      {
-        question: "When do you use = ?",
-        answer: "to define a variable",
-        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
-      },
-      {
-        question: "When do you use an ID in a HTML file?",
-        answer: "when you want to assign an unique selector to element",
-        wrongAnswers: ["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"]
-      }
-    ];
-
     return flashCards;
   }
 
@@ -72,8 +56,8 @@ export class FlashCard {
     ];
 
     forms = `<form class="flash-cards card-${index} hide">
-        <div class="panel panel-default">
-          <div class="panel-heading">
+        <div class="panel">
+          <div class="panel-heading panel-color">
             <label for="question" id="question1">${card.question}</label>
             <div class="timer"> </div> <span class="times-up hide">Times UP ⏰</span>
           </div>
