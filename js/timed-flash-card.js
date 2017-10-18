@@ -60,11 +60,16 @@ export class FlashCard {
           <div class="panel-heading panel-color">
             <div class="row">
               <div class="col-md-2">
-                <div class="timer"> </div> <span class="times-up hide">Times UP ⏰</span>
+                <div class="text-center">
+                  <div class="timer"> </div>
+                </div>
               </div>
               <div class="col-md-8">
                 <div class="text-center">
                   <label for="question" id="question1">${card.question}</label>
+                </div>
+                <div class="text-center">
+                  <span class="times-up hide">Times UP ⏰ ⏰ ⏰</span>
                 </div>
               </div>
               <div class="col-md-2">
