@@ -43,12 +43,6 @@ export class FlashCard {
     this.points++;
   }
 
-  startTimer(num){
-    setInterval(() => {
-      this.timer--;
-    }, num * 1000);
-  }
-
   static createForm(card, index) {
     let forms;
     const answers = [
@@ -100,7 +94,3 @@ export class FlashCard {
 
   //ending
 }
-
-// function RadionButtonSelectedValueSet() {
-//   $("input[name='answer']").prop('value', "hello");
-// }
