@@ -71,7 +71,7 @@ export class FlashCard {
       </div>`
     ];
 
-    forms = `<form class="flash-cards">
+    forms = `<form class="flash-cards card-${index} hide">
         <div class="panel panel-default">
           <div class="panel-heading">
             <label for="question" id="question1">${card.question}</label>

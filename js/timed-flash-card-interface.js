@@ -3,6 +3,7 @@ import { FlashCard } from "./../js/timed-flash-card.js";
 $(document).ready(function() {
   let player = new FlashCard();
   let counter;
+  let index = 0;
 
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
@@ -21,6 +22,8 @@ $(document).ready(function() {
 
 
   $("button.start").click(() => {
+    $("div.start").addClass("hide");
+    $(`.card-${index}`).removeClass("hide");
      counter = setInterval(() => {
          $("div.timer").text(player.timer);
          if (player.timer === 0){
@@ -50,11 +53,15 @@ $(document).ready(function() {
 
 
   $("button.next").click(() => {
+    $(`.card-${index}`).addClass("hide");
+    index++;
+    $(`.card-${index}`).removeClass("hide");
     player.timer = 10;
     $(".button").removeClass("btn-danger");
     $(".btn-answer").removeClass("btn-success");
     $("span.times-up").addClass("hide");
-    $("div.timer").text("");
+    $("div.timer").text("")
+    ;
       counter = setInterval(() => {
       $("div.timer").text(player.timer);
       if (player.timer === 0){
