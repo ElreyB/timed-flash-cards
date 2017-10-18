@@ -48,11 +48,11 @@ _Feel free to contact me at elbelmonti@gmail.com_
 ## Contributors
 
 <!-- Contributors START
-Elrey_Belmonti ElreyB https://github.com/ElreyB code doc bug design test
-Linda_Luu tocodenow https://github.com/tocodenow code doc bug design test
+Elrey_Belmonti ElreyB https://github.com/ElreyB code doc bug design tests
+Linda_Luu tocodenow https://github.com/tocodenow code doc bug design tests
 Contributors END -->
 <!-- Contributors table START -->
-| <img src="https://avatars.githubusercontent.com/ElreyB?s=100" width="100" alt="Elrey Belmonti" /><br />[<sub>Elrey Belmonti</sub>](https://github.com/ElreyB)<br />[💻](https://github.com/ElreyB/timed-flash-cards/commits?author=ElreyB) [📖](https://github.com/ElreyB/timed-flash-cards/commits?author=ElreyB) [🐛](https://github.com/ElreyB/timed-flash-cards/issues?q=author%3AElreyB) 🎨 undefined | <img src="https://avatars.githubusercontent.com/tocodenow?s=100" width="100" alt="Linda Luu" /><br />[<sub>Linda Luu</sub>](https://github.com/tocodenow)<br />[💻](https://github.com/ElreyB/timed-flash-cards/commits?author=tocodenow) [📖](https://github.com/ElreyB/timed-flash-cards/commits?author=tocodenow) [🐛](https://github.com/ElreyB/timed-flash-cards/issues?q=author%3Atocodenow) 🎨 undefined |
+| <img src="https://avatars.githubusercontent.com/ElreyB?s=100" width="100" alt="Elrey Belmonti" /><br /><sub>Elrey Belmonti</sub>](https://github.com/ElreyB)<br />[💻](https://github.com/ElreyB/timed-flash-cards/commits?author=ElreyB) [📖](https://github.com/ElreyB/timed-flash-cards/commits?author=ElreyB) [🐛](https://github.com/ElreyB/timed-flash-cards/issues?q=author%3AElreyB) 🎨 [⚠️](https://github.com/ElreyB/timed-flash-cards/commits?author=ElreyB) | <img src="https://avatars.githubusercontent.com/tocodenow?s=100" width="100" alt="Linda Luu" /><br /><sub>Linda Luu</sub>](https://github.com/tocodenow)<br />[💻](https://github.com/ElreyB/timed-flash-cards/commits?author=tocodenow) [📖](https://github.com/ElreyB/timed-flash-cards/commits?author=tocodenow) [🐛](https://github.com/ElreyB/timed-flash-cards/issues?q=author%3Atocodenow) 🎨 [⚠️](https://github.com/ElreyB/timed-flash-cards/commits?author=tocodenow) |
 | :---: | :---: |
 <!-- Contributors table END -->
 This project follows the [all-contributors](https://github.com/kentcdodds/all-contributors) specification.
