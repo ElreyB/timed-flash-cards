@@ -12,3 +12,11 @@ body {
 h3 {
   text-align: center;
 }
+
+.button {
+  margin: 5px;
+}
+
+.timer, .points, .times-up, .points-title, #question1 {
+  font-size: 30px;
+}
