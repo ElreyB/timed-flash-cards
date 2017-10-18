@@ -1,1 +1,22 @@
+body {
+  background-color: #45ADA8;
+}
+.name-container, .start-container, .panel-heading, .panel-footer {
+  background-color: #1cb2b3;
+}
 
+.display-cards, .panel-body {
+  background-color: #594f4f;
+}
+
+h3 {
+  text-align: center;
+}
+
+.button {
+  margin: 5px;
+}
+
+.timer, .points, .times-up, .points-title, #question1 {
+  font-size: 30px;
+}
