@@ -2,6 +2,7 @@ import { FlashCard } from "./../js/timed-flash-card.js";
 
 $(document).ready(function() {
   let player = new FlashCard();
+  let counter;
 
   let flashCards = FlashCard.cards();
   flashCards.forEach(function(card, index) {
@@ -17,14 +18,15 @@ $(document).ready(function() {
     $("div.name-container").addClass("hide");
     $("div.start").removeClass("hide");
   });
-  
-  let counter;
+
+
   $("button.start").click(() => {
      counter = setInterval(() => {
          $("div.timer").text(player.timer);
          if (player.timer === 0){
            clearInterval(counter);
            $("span.times-up").removeClass("hide");
+           $(".btn-answer").addClass("btn-success");
          }
          player.timer--;
       }, 1000);
@@ -51,11 +53,14 @@ $(document).ready(function() {
     player.timer = 10;
     $(".button").removeClass("btn-danger");
     $(".btn-answer").removeClass("btn-success");
+    $("span.times-up").addClass("hide");
+    $("div.timer").text("");
       counter = setInterval(() => {
       $("div.timer").text(player.timer);
       if (player.timer === 0){
         clearInterval(counter);
         $("span.times-up").removeClass("hide");
+        $(".btn-answer").addClass("btn-success");
       }
       player.timer--;
     }, 1000);
