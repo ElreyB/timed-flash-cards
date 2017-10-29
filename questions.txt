@@ -1,0 +1,37 @@
+What does it mean that web development can be behavior-driven?
+What is represented in a specification?
+What is the purpose of refactoring? Why is refactoring ideally completed before moving on to the next specification?
+What is a key-value pair? What does a key represent? How about the value?
+When might we use a hash? What's the difference between a Hash and an Array?
+How does inheritance work in Ruby? How is it useful?
+What is the difference between a module and a class?
+When should we use a mixin instead of class inheritance
+What is an attr method and why are these methods useful?
+What is the Enumerable module and what are some of its most useful methods? (Take some time to look over the Enumerable documentation if you haven’t already.)
+What is the difference between map() and an each() loop?
+What is a GET request?
+What is an embedded Ruby tag?
+How is the form action in a form important to a Sinatra application?
+How does Sinatra know which route to execute?
+Describe how app.rb routes are used to manage data between models (classes and methods) and views (.erb files).
+What is the difference between GET and POST requests?
+What is an integration test?
+What is Capybara?
+What is the difference between a class variable and an instance variable?
+Why would you create a class method instead of an instance method?
+Why should you generally avoid class variables?
+What is dynamic routing and why is it useful?
+In BDD, why is it important to begin by testing the simplest possible behavior?
+Discuss the benefits of testing with your partner. Why should we write tests for our code? What can happen if we do not?
+What is the initialize() method? What is it responsible for? When does it run?
+What is the difference between a local and instance variable? What about an instance variable and a class variable?
+What is a class? What benefits do they offer?
+What is an object?
+What is a module and why should we use them?
+What is a class method? When should we define a class method instead of an instance method?
+What is the difference between a GET and POST request? Provide an example use case of each.
+Consider the following code snippet. Walk your partner through what is occurring here, line-by-line. What can you tell about the application as a whole, based on this limited snippet?
+What is namespacing? How can we use modules to namespace classes?
+How do we look up constants in Ruby?
+What does it mean when there is a colon in a Sinatra app.rb route? (ie: get('/users/:id') do)? What does the :id portion of the route represent?
+What is the difference between local, instance, class and global variables? This may be review, but at this point, the differences should be very clear!

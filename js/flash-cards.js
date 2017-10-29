@@ -10,7 +10,7 @@ export const flashCards = shuffleArray([
   {
     question: "When do you use === ?",
     answer: "to compare if values are equal",
-    wrongAnswers: shuffleArray(["to define a variable", "wrong2", "wrong3", "wrong4", "wrong5"])
+    wrongAnswers: shuffleArray(["to define a variable", "to see which value is bigger", "to define a function", "to", "wrong5"])
   },
   {
     question: "When do you use = ?",
