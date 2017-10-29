@@ -6,7 +6,7 @@ export function shuffleArray(array) {
   return array;
 }
 
-export const flashCards = [
+export const flashCards = shuffleArray([
   {
     question: "When do you use === ?",
     answer: "to compare if values are equal",
@@ -22,4 +22,4 @@ export const flashCards = [
     answer: "when you want to assign an unique selector to element",
     wrongAnswers: shuffleArray(["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"])
   }
-];
+]);
