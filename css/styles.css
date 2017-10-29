@@ -9,7 +9,7 @@ body {
   background-color: #594f4f;
 }
 
-h3 {
+h3, .start-container {
   text-align: center;
 }
 
