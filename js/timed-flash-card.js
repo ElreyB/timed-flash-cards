@@ -48,7 +48,7 @@ export class FlashCard {
         </button>
       </div>`,
       `<div class="col-md-6">
-        <button type="button" name="wrong2" index="${index}" value="${card
+        <button type="button" name="wrong3" index="${index}" value="${card
         .wrongAnswers[2]}" class="btn btn-lg button">
           <span class="wrong2">${card.wrongAnswers[2]}</span>
         </button>

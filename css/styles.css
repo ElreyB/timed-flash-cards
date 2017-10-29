@@ -20,3 +20,7 @@ h3, .start-container {
 .timer, .points, .times-up, .points-title, #question1 {
   font-size: 30px;
 }
+
+.btn[disabled] {
+  opacity: 1;
+}

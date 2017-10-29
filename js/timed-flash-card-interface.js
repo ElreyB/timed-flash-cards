@@ -49,6 +49,7 @@ $(document).ready(function() {
     if (player.points > 0) {
       $(".points").text(player.points);
     }
+    $(".button").attr("disabled", "disabled");
   });
 
 
@@ -61,6 +62,7 @@ $(document).ready(function() {
     $(".btn-answer").removeClass("btn-success");
     $("span.times-up").addClass("hide");
     $("div.timer").text("")
+    $(".button").removeAttr("disabled");
     ;
       counter = setInterval(() => {
       $("div.timer").text(player.timer);
