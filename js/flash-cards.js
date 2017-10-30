@@ -8,7 +8,7 @@ export function shuffleArray(array) {
 
 export const flashCards = shuffleArray([
   {
-    question: "When do you use === ?",
+    question: "When do you use == ?",
     answer: "to compare if values are equal",
     wrongAnswers: shuffleArray(["to define a variable", "to see which value is bigger", "to define a function", "to", "wrong5"])
   },
@@ -21,5 +21,10 @@ export const flashCards = shuffleArray([
     question: "When do you use an ID in a HTML file?",
     answer: "when you want to assign an unique selector to element",
     wrongAnswers: shuffleArray(["wrong1", "wrong2", "wrong3", "wrong4", "wrong5"])
+  },
+  {
+    question: "Which of the expressions listed below will result in 'false'?",
+    answer: "false   ? 'true' : 'false'",
+    wrongAnswers: shuffleArray(["1 ? 'true' : 'false'", "'false' ? 'true' : 'false'", "' ? 'true' : 'false'", "[] ? 'true' : 'false'", "true ? 'true' : 'false'"])
   }
 ]);
